@@ -1,8 +1,45 @@
-<h1>TITLE (This is title of paper)</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title><h1>TITLE (This is title of paper)</h1></title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+        <link rel="stylesheet" href="main.css">
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+              "HTML-CSS": {
+                 availableFonts: [],
+                 preferredFont: null,
+                 webFont: "MathJax-TeX"
+              },
+              linereak: {
+                automatic: false
+              },
+              TeX: {
+                  equationNumbers: {
+                    autoNumber: "AMS"
+                  }
+              }
+            });
+        </script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
+        <!--
+                 webFont: "Neo-Euler"
+                 webFont: "STIX-Web"
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+        -->
+        <!--
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+        -->
+    </head>
+    <body>
+        <h1>TITLE (This is title of paper)</h1>
 <div id="auther">
-6930-29-1853<br/>
-澤田 格
+0000-00-0000<br/>
+John Smith
 </div><div id="abstract">
+<h2 class="counter-skip">Abstract</h2>
 This is abstract of this paper. some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text.
 </div><h2>Introduction (Heading 2)</h2>
 <h2>Body of the Paper</h2>
@@ -61,17 +98,20 @@ $$</p>
 </table>
 <h3>Figures</h3>
 <figure id="Fig.1">
-<img src="./sample.png" width="100%">
+<img src="./sample.svg" width="100%">
 <figcaption>Fig.1</figcaption>
 </figure><p>This is figure. This is figure. This is figure. This is figure. This is figure. This is figure. This is figure. This is figure. This is figure. This is figure. This is figure. This is figure.</p>
 <h2>Conclusion</h2>
 <p>This is conclusion. This is conclusion. This is conclusion. This is conclusion. This is conclusion. This is conclusion. This is conclusion. This is conclusion. This is conclusion. This is conclusion. This is conclusion. This is conclusion. This is conclusion. This is conclusion. This is conclusion. This is conclusion. This is conclusion. This is conclusion. This is conclusion.</p>
 <h2>Refferences</h2>
 <ol>
-<li>Somebody A, Someone B and Homes S. Title of paper, tile of jarnal, Nov 1994, 85-12</li>
-<li>Somebody A, Someone B and Homes S. Title of paper, tile of jarnal, Nov 1994, 85-12</li>
-<li>Somebody A, Someone B and Homes S. Title of paper, tile of jarnal, Nov 1994, 85-12</li>
-<li>Somebody A, Someone B and Homes S. Title of paper, tile of jarnal, Nov 1994, 85-12</li>
-<li>Somebody A, Someone B and Homes S. Title of paper, tile of jarnal, Nov 1994, 85-12</li>
-<li>Somebody A, Someone B and Homes S. Title of paper, tile of jarnal, Nov 1994, 85-12</li>
+<li id='id1'>Somebody A, Someone B and Homes S. Title of paper, tile of jarnal, Nov 1994, 85-12</li>
+<li id='id2'>Somebody A, Someone B and Homes S. Title of paper, tile of jarnal, Nov 1994, 85-12</li>
+<li id='id3'>Somebody A, Someone B and Homes S. Title of paper, tile of jarnal, Nov 1994, 85-12</li>
+<li id='id4'>Somebody A, Someone B and Homes S. Title of paper, tile of jarnal, Nov 1994, 85-11</li>
+<li id='id5'>Somebody A, Someone B and Homes S. Title of paper, tile of jarnal, Nov 1994, 85-12</li>
+<li id='id6'>Somebody A, Someone B and Homes S. Title of paper, tile of jarnal, Nov 1994, 85-12</li>
 </ol>
+
+    </body>
+</html>

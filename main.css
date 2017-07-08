@@ -1,0 +1,86 @@
+body {
+  padding: 15px 50px 30px;
+  column-count: 2;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12pt;
+  -webkit-hyphens: auto; }
+
+p {
+  text-indent: 1.5em; }
+
+table {
+  counter-increment: table;
+  border-collapse: collapse;
+  margin: 1.66667em 0 1em;
+  page-break-inside: avoid; }
+
+th, td {
+  border: 0.5px solid #000;
+  text-align: center;
+  padding: 0.33333em; }
+
+caption {
+  caption-side: top;
+  font-weight: bold;
+  margin-top: 0 0 4px;
+  break-before: avoid; }
+  caption ::before {
+    content: "Table" counter(table) "."; }
+
+figure {
+  counter-increment: figure;
+  text-align: center;
+  break-inside: avoid; }
+
+figcaption {
+  font-weight: bold;
+  break-before: avoid; }
+  figcaption ::before {
+    content: "Figure" counter(figure) "."; }
+
+h1, h2, h3, h4, h5, h6 {
+  break-after: avoid;
+  font-weight: bold;
+  -webkit-hyphens: none; }
+  h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+    text-indent: 0; }
+
+h1 {
+  column-span: all;
+  text-align: center;
+  font-size: 1.5em;
+  counter-reset: section; }
+
+h2 {
+  font-size: 1.2em;
+  counter-reset: subsection; }
+  h2:not(.counter-skip)::before {
+    content: counter(section) ". ";
+    counter-increment: section; }
+
+h3 {
+  font-size: 1em;
+  counter-reset: subsubsection; }
+  h3:not(.counter-skip)::before {
+    content: counter(section) "." counter(subsection) ". ";
+    counter-increment: subsection; }
+
+h4 {
+  counter-reset: subsubsubsection; }
+  h4:not(.counter-skip)::before {
+    content: counter(section) "." counter(subsection) "." counter(subsubsection) ". ";
+    counter-increment: subsubsection; }
+
+h5:not(.counter-skip)::before {
+  content: counter(section) "." counter(subsection) "." counter(subsubsection) "." counter(subsubsubsection) ". ";
+  counter-increment: subsubsubsection; }
+
+#auther {
+  column-span: all;
+  text-align: center;
+  margin-bottom: 20px; }
+
+#abstract h2 {
+  text-align: center; }
+
+/*# sourceMappingURL=main.css.map */
