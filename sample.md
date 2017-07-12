@@ -48,4 +48,4 @@ This is conclusion. This is conclusion. This is conclusion. This is conclusion. 
 1. Somebody A, Someone B and Homes S. Title of paper, tile of jarnal, Nov 1994, 85-12{#id3}
 1. Somebody A, Someone B and Homes S. Title of paper, tile of jarnal, Nov 1994, 85-11{#id4}
 1. Somebody A, Someone B and Homes S. Title of paper, tile of jarnal, Nov 1994, 85-12{#id5}
-1. Somebody A, Someone B and Homes S. Title of paper, tile of jarnal, Nov 1994, 85-12{#id6}
+1. Somebody A, Someone B and Homes S. Title of paper, tile of jarnal, Nov 1994, 85-12

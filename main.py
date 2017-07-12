@@ -7,6 +7,10 @@ from argparse import ArgumentParser
 from mistune import mistune
 
 
+FILEDIR = os.path.dirname(os.path.abspath(__file__))
+TEMPLETEFILE = 'templete.html'
+
+
 def parser():
     usage = 'Usage: python {} FILE [--templete <file>] [--help]'\
             .format(__file__)
@@ -17,7 +21,7 @@ def parser():
                            dest='templete_file',
                            help='use your templete file')
     args = argparser.parse_args()
-    ret = {'md': args.fname, 'templete': 'templete.html'}
+    ret = {'md': args.fname, 'templete': os.path.join(FILEDIR, TEMPLETEFILE)}
     if args.templete_file:
         ret['templete'] = args.templete_file
     return ret
@@ -33,6 +37,7 @@ class IDRenderer(mistune.Renderer):
         if idatr is not None:
             return '<li id=\'{}\'>{}</li>\n'\
                     .format(idatr.group(1), text)
+        return '<li>{}</li>\n'.format(text)
 
 
 def main():
@@ -46,12 +51,12 @@ def main():
     h = re.compile('<h1>(.*)</h1>')
     h1 = h.search(rep['content'])
     if h1 is not None:
-        rep['title'] = h1.group(0)
+        rep['title'] = h1.group(1)
     f = open(args['templete'])
     temp = f.read()
     f.close()
     for key in rep:
-        temp = re.sub('{{'+key+'}}', rep[key], temp)
+        temp = temp.replace('{{'+key+'}}', rep[key])
     fname, ext = os.path.splitext(args['md'])
     f = open(fname+'.html', 'w')
     f.write(temp)
